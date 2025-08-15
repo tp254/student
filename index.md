@@ -14,7 +14,7 @@ Hi! My name is [Your Full Name].
 
 | Element | Markdown Syntax |
 |---------| ----------------|
-| Heading | H1, H2,  H3 |
+| Heading | H1, H2,  H3     |
 
 
 
@@ -49,10 +49,10 @@ Hi! My name is [Your Full Name].
 
 ### Class Progress
 
-<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #6b4bd3ff">
+<a href="{{site.baseurl}}/snake" class="button large" style="background-color: #6b4bd3ff">
     Snake Game
 </a>
-<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
+<a href="{{site.baseurl}}/turtle" class="button large" style="background-color: #2A7DB1">
     <span style="color: #000000">Turtle</span>
 </a>
 
