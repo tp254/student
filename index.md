@@ -8,6 +8,12 @@ hide: true
 
 Hi! My name is [Your Full Name].
 
+## Del Norte High School
+
+| col 1 | col 2 |
+|-------| ------|
+| nuiho|lijio|
+
 | Role         | Name     | Repo Location                       | Stream                | Repo Name |
 |--------------|----------|-------------------------------------|-----------------------|-----------|
 | Scrum Master | John     | github.com/jm1021/student           | upstream (OCS fork)   | student   |
