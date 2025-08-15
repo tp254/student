@@ -6,9 +6,9 @@ hide: true
 
 ### Me and Team
 
-Hi! My name is [Your Full Name].
+Hi! My name is Tanay P.
 
-## Del Norte High School
+## Del Norte High School Computer Science Principles
 
 ### Markdown Cheat Sheet 
 
@@ -44,6 +44,11 @@ Hi! My name is [Your Full Name].
 <a href="https://vscode.dev/" class="button small" style="background-color: #d38a4bff">
     <span style="color: #FFFFFF">VSCODE</span>
 </a>
+
+<a href="https://poway.instructure.com/courses/182501/assignments/3826246" class="button large" style="background-color: #c42121ff>
+
+</a>
+
 
 <br>
 
