@@ -10,9 +10,13 @@ Hi! My name is [Your Full Name].
 
 ## Del Norte High School
 
-| col 1 | col 2 |
-|-------| ------|
-| nuiho|lijio|
+### Markdown Cheat Sheet 
+
+| Element | Markdown Syntax |
+|---------| ----------------|
+| Heading | H1, H2,  H3 |
+
+
 
 | Role         | Name     | Repo Location                       | Stream                | Repo Name |
 |--------------|----------|-------------------------------------|-----------------------|-----------|
