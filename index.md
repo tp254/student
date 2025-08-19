@@ -6,7 +6,7 @@ hide: true
 
 ### Me and Team
 
-Hi! My name is Tanay P.
+Hi! My name is Tanay P!
 
 ## Del Norte High School Computer Science Principles
 
