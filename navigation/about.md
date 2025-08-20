@@ -96,36 +96,41 @@ Flags are made using Wikipedia images
         container.appendChild(gridItem);
     }
 </script>
-
 ## 👋 About Me
 
 ### 📘 My Journey
-<div class="about-section">
-  <ul>
-    <li>Born & raised in San Diego 🌴</li>
-    <li>Monterey Ridge Elementary → Oak Valley Middle → Del Norte High School 🎓</li>
-    <li>Proud to have lived in San Diego my whole life</li>
-  </ul>
-</div>
+<ul>
+  <li>Born & raised in San Diego</li>
+  <li>Attended Monterey Ridge Elementary → Oak Valley Middle → Del Norte High School</li>
+  <li>Proud to have lived in San Diego my whole life</li>
+</ul>
 
 ### 🔧 Technical Passions
-<div class="about-section">
-  <ul>
-    <li>Robotics 🤖 – Director of Assembly & Mechanics, working with industrial tools and companies</li>
-    <li>Design & Manufacturing 🛠️ – Love using CAD to engineer and manufacture complex parts</li>
-    <li>Rocketry 🚀 – Create simulations in OpenRocket and build real rockets with laser-cut fabrication</li>
-    <li>Innovation 💡 – Passionate about problem-solving and turning ideas into solutions</li>
-  </ul>
-</div>
+<ul>
+  <li>Robotics – Director of Assembly & Mechanics, working with industrial tools and companies</li>
+  <li>Design & Manufacturing – Enjoy using computer-aided design to design and manufacture complex parts</li>
+  <li>Rocketry – Love creating simulated designs to later build real rockets using OpenRocket and laser-cut fabrication</li>
+</ul>
 
 ### 🎶 Personal Interests
-<div class="about-section">
-  <ul>
-    <li>Tennis 🎾 – Enjoy playing both casually and competitively</li>
-    <li>Piano 🎹 – Over 12 years experience, completed ABRSM exams</li>
-    <li>Family & Friends 🤝 – Value spending quality time and building strong connections</li>
-  </ul>
-</div>
+<ul>
+  <li>Tennis – Enjoy playing casually and competitively</li>
+  <li>Piano – Over 12 years of experience, ABRSM exams completed</li>
+  <li>Spending time with friends and family</li>
+</ul>
+
+<style>
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+</style>
+
 
 <style>
   .about-section {
