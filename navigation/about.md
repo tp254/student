@@ -97,27 +97,72 @@ Flags are made using Wikipedia images
     }
 </script>
 
-### Journey through Life
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { School, Robot, Tools, Rocket, Lightbulb, Tennis, Piano, Users } from "lucide-react";
 
-Here is what I did at those places
+export default function AboutMe() {
+  const sections = [
+    {
+      title: "My Journey",
+      icon: <School size={32} />, 
+      items: [
+        "Born & raised in San Diego 🌴",
+        "Monterey Ridge Elementary → Oak Valley Middle → Del Norte High School 🎓",
+        "Proud to have lived in San Diego my whole life"
+      ]
+    },
+    {
+      title: "Technical Passions",
+      icon: <Robot size={32} />,
+      items: [
+        "Robotics 🤖 – Director of Assembly & Mechanics, working with industrial tools and companies",
+        "Design & Manufacturing 🛠️ – Love using CAD to engineer and manufacture complex parts",
+        "Rocketry 🚀 – Create simulations in OpenRocket and build real rockets with laser-cut fabrication",
+        "Innovation 💡 – Passionate about problem-solving and turning ideas into solutions"
+      ]
+    },
+    {
+      title: "Personal Interests",
+      icon: <Users size={32} />,
+      items: [
+        "Tennis 🎾 – Enjoy playing both casually and competitively",
+        "Piano 🎹 – Over 12 years experience, completed ABRSM exams",
+        "Family & Friends 🤝 – Value spending quality time and building strong connections"
+      ]
+    }
+  ];
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
-
-### Culture, Family, and Fun
-
-Everything for me, as for many others, revolves around family and faith.
-
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-indigo-100 via-white to-purple-100 p-8">
+      <h1 className="text-4xl font-bold text-center mb-12">👋 About Me</h1>
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {sections.map((section, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+          >
+            <Card className="rounded-2xl shadow-md hover:shadow-xl transition bg-white/80 backdrop-blur p-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="text-indigo-600 mb-4">{section.icon}</div>
+                <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
+                <ul className="text-gray-700 space-y-2">
+                  {section.items.map((item, i) => (
+                    <li key={i} className="text-sm">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
