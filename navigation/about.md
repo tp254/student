@@ -97,72 +97,51 @@ Flags are made using Wikipedia images
     }
 </script>
 
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { School, Robot, Tools, Rocket, Lightbulb, Tennis, Piano, Users } from "lucide-react";
+## 👋 About Me
 
-export default function AboutMe() {
-  const sections = [
-    {
-      title: "My Journey",
-      icon: <School size={32} />, 
-      items: [
-        "Born & raised in San Diego 🌴",
-        "Monterey Ridge Elementary → Oak Valley Middle → Del Norte High School 🎓",
-        "Proud to have lived in San Diego my whole life"
-      ]
-    },
-    {
-      title: "Technical Passions",
-      icon: <Robot size={32} />,
-      items: [
-        "Robotics 🤖 – Director of Assembly & Mechanics, working with industrial tools and companies",
-        "Design & Manufacturing 🛠️ – Love using CAD to engineer and manufacture complex parts",
-        "Rocketry 🚀 – Create simulations in OpenRocket and build real rockets with laser-cut fabrication",
-        "Innovation 💡 – Passionate about problem-solving and turning ideas into solutions"
-      ]
-    },
-    {
-      title: "Personal Interests",
-      icon: <Users size={32} />,
-      items: [
-        "Tennis 🎾 – Enjoy playing both casually and competitively",
-        "Piano 🎹 – Over 12 years experience, completed ABRSM exams",
-        "Family & Friends 🤝 – Value spending quality time and building strong connections"
-      ]
-    }
-  ];
+### 📘 My Journey
+<div class="about-section">
+  <ul>
+    <li>Born & raised in San Diego 🌴</li>
+    <li>Monterey Ridge Elementary → Oak Valley Middle → Del Norte High School 🎓</li>
+    <li>Proud to have lived in San Diego my whole life</li>
+  </ul>
+</div>
 
-  return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-100 via-white to-purple-100 p-8">
-      <h1 className="text-4xl font-bold text-center mb-12">👋 About Me</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {sections.map((section, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: idx * 0.1 }}
-          >
-            <Card className="rounded-2xl shadow-md hover:shadow-xl transition bg-white/80 backdrop-blur p-6">
-              <div className="flex flex-col items-center text-center">
-                <div className="text-indigo-600 mb-4">{section.icon}</div>
-                <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
-                <ul className="text-gray-700 space-y-2">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="text-sm">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-}
+### 🔧 Technical Passions
+<div class="about-section">
+  <ul>
+    <li>Robotics 🤖 – Director of Assembly & Mechanics, working with industrial tools and companies</li>
+    <li>Design & Manufacturing 🛠️ – Love using CAD to engineer and manufacture complex parts</li>
+    <li>Rocketry 🚀 – Create simulations in OpenRocket and build real rockets with laser-cut fabrication</li>
+    <li>Innovation 💡 – Passionate about problem-solving and turning ideas into solutions</li>
+  </ul>
+</div>
+
+### 🎶 Personal Interests
+<div class="about-section">
+  <ul>
+    <li>Tennis 🎾 – Enjoy playing both casually and competitively</li>
+    <li>Piano 🎹 – Over 12 years experience, completed ABRSM exams</li>
+    <li>Family & Friends 🤝 – Value spending quality time and building strong connections</li>
+  </ul>
+</div>
+
+<style>
+  .about-section {
+    margin-bottom: 2rem;
+  }
+
+  .about-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .about-section li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+</style>
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
