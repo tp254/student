@@ -160,21 +160,11 @@ body {
 }
 
 .about-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-    transition: all 0.3s ease;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(255,255,255,0.1);
+    transition: all 0.4s ease;
 }
 </style>
-
-<div class="scroll-bar">
-    <div class="scroll-fill" id="fill"></div>
-</div>
-
-<script>
-window.onscroll = () => {
-    document.getElementById('fill').style.height = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100 + '%';
-};
-</script>
 
 
 <comment>
