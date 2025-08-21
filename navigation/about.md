@@ -147,9 +147,36 @@ Flags are made using Wikipedia images
 body {
     background: linear-gradient(135deg, #2c5aa0, #000000);
 }
+<style>
+body {
+    background: linear-gradient(135deg, #2c5aa0, #000000);
+}
+.scroll-bar {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    width: 15px;
+    height: 100vh;
+    background: rgba(255,255,255,0.3);
+}
+
+.scroll-fill {
+    width: 100%;
+    background: #74b9ff;
+    height: 0%;
+}
 </style>
- // Adds gradient to bacgroudn from blue --> black; starting trnasition from 135 degrees and downwards
- 
+
+<div class="scroll-bar">
+    <div class="scroll-fill" id="fill"></div>
+</div>
+
+<script>
+window.onscroll = () => {
+    document.getElementById('fill').style.height = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100 + '%';
+};
+</script>
+
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
