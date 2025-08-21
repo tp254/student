@@ -164,23 +164,66 @@ body {
     box-shadow: 0 15px 25px rgba(255,255,255,0.1);
     transition: all 0.4s ease;
 }
+
+.about-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-section li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.slideshow {
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 </style>
 
+<script>
+window.onscroll = () => {
+    document.getElementById('fill').style.height = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100 + '%';
+};
+</script>
 
-<comment>
-Gallery of Pics, scroll to the right for more ...
-</comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
+
+<script>
+let photos = [
+    "https://raw.githubusercontent.com/tp254/student/main/assets/assets/IMG_2933.JPG",
+    "https://raw.githubusercontent.com/tp254/student/main/assets/assets/IMG_9919.JPG",
+    
+    
+];
+
+let currentPhoto = 0;
+
+setInterval(() => {
+    currentPhoto++;
+    if (currentPhoto >= photos.length) currentPhoto = 0;
+    document.getElementById('slideImg').src = photos[currentPhoto];
+}, 2000);
+</script>
+
+
+<div class="scroll-bar">
+    <div class="scroll-fill" id="fill">
+</div>
+
+
+<div class="slideshow">
+    <img id="slideImg" src="https://raw.githubusercontent.com/tp254/student/main/assets/assets/IMG_2933.JPG" alt="My Photos">
+    <img id="slideImg" src="https://raw.githubusercontent.com/tp254/student/main/assets/assets/IMG_9919.JPG" alt="My Photos">
 </div>
