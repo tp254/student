@@ -127,30 +127,16 @@ Flags are made using Wikipedia images
   </ul>
 </div>
 
-<style>
-  .about-section {
-    margin-bottom: 2rem;
-  }
-
-  .about-section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .about-section li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-</style>
 
 <style>
+
+
 body {
     background: linear-gradient(135deg, #2c5aa0, #000000);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
-<style>
-body {
-    background: linear-gradient(135deg, #2c5aa0, #000000);
-}
+
+
 .scroll-bar {
     position: fixed;
     top: 0;
@@ -165,6 +151,14 @@ body {
     background: #74b9ff;
     height: 0%;
 }
+
+.about-section {
+    margin-bottom: 2rem;
+    border: 3px solid rgba(255, 255, 255, 0.68);
+    padding: 25px;
+    border-radius: 15px;
+}
+
 </style>
 
 <div class="scroll-bar">
