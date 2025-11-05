@@ -1,0 +1,80 @@
+---
+layout: post
+title: Trimester 1 Retrospective Blog
+description: refelcting on my learnings, projects, and takeaways from Trimester 1 CSP
+permalink: /tri1_blog/tanay_paranjpe
+Author: Aneesh Deevi, Moiz Lukmani, Perry Say
+---
+
+# Tri 1 Retrospective
+
+This post collects reflections, lessons, and next steps from the first trimester. It covers personal growth, three sprint highlights, N@tM feedback, project roadmap, learning goals, analytics and MCQ review, and one cool thing I want to share.
+
+## 1) Where I am vs the beginning of the year
+- Beginning of the year: basic confidence with syntax, tentative about architecture and testing.
+- Now: clearer mental models for problem solving, more comfortable reading and modifying other people's code, and better at writing small, testable functions.
+- Concrete improvement: I write fewer "trial-and-error" runs in the REPL and more deliberate small tests.
+
+## 2) Key things from three sprints
+- Tools
+  - Git workflows became routine (feature branches, PRs).
+  - Learned to use VS Code features: integrated terminal, test runner, and debugging.
+  - Basic automation: linting and simple scripts to run test suites.
+
+- Fundamentals of JavaScript / Python
+  - Reinforced core concepts: scope, closures (JS), first-class functions, and list/dict comprehensions (Python).
+  - Practice with conditionals and control flow improved the structure of my solutions.
+  - Unit testing basics: writing assertions, test setup/teardown patterns.
+
+- West Coast Travel / Digital Famine (project sprint)
+  - Product thinking: turning a dataset / theme into user stories and minimal viable features.
+  - Data handling: simple ingestion and display; learned trade-offs between UX polish and shipping features.
+  - Collaboration: splitting tasks, syncing on APIs and data formats.
+
+## 3) N@tM — how it went
+- Outcome: Project demonstrated technical depth and clear explanations.
+- Feedback I liked:
+  - Comments highlighting the clarity of my technical language.
+  - Praise about the depth of the project and how it connected tools and concepts.
+- Takeaway: Stronger emphasis on communicating design decisions paid off.
+
+## 4) Next on the project (given time)
+- Short-term (next sprint)
+  - Add automated tests for core modules (unit + a small integration test).
+  - Improve README and architecture diagram.
+  - Fix one UX friction reported in user testing.
+
+- Medium-term
+  - Add simple analytics dashboard to track feature usage.
+  - Implement a small backend endpoint to serve aggregated data.
+
+## 5) What I want to learn next in CompSci
+- Algorithms & data structures: practice common patterns and complexity trade-offs.
+- Software engineering: design patterns, system design basics, and testing strategies.
+- DevOps basics: CI/CD pipelines, containerization (Docker), and simple deployments.
+
+## 6) Analytics review (summary)
+- Metrics to track:
+  - Pageviews and unique visitors for the project pages.
+  - Feature usage (which pages or endpoints are used most).
+  - Test coverage for critical modules.
+- Current status (if available): prioritize adding event logging to capture these metrics; even simple CSV logs are useful to start.
+
+## 7) MCQ review — score, corrections, and approach
+- Score: log your raw score and list topics missed.
+- Correction approach:
+  - For each missed question, write a 1–2 sentence explanation of the correct concept.
+  - Re-create a short test problem that targets the same misunderstanding.
+- Strategy going forward: timed practice, review flashcards for weak topics, and deliberately explain answers aloud.
+
+## 8) Something cool to share
+- Demo idea: a tiny interactive visualization showing how a conditional tree evaluates a small program (step-by-step highlight of branches taken).
+- Benefit: helps teammates and future readers see control flow concretely.
+
+## Closing
+Congrats on a great N@tM. Many people commented to me about the depth of your project, and they were impressed with your technical language. Keep iterating: write tests, add small analytics, and continue practicing fundamentals.
+
+If you want, I can:
+- Turn this into a polished Jekyll post with images and metadata.
+- Add a small analytics template (Netlify Analytics / Plausible / simple CSV logger).
+- Generate a checklist of next-sprint tasks and example unit tests.
