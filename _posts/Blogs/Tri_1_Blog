@@ -3,28 +3,31 @@ layout: post
 title: Trimester 1 Retrospective Blog
 description: refelcting on my learnings, projects, and takeaways from Trimester 1 CSP
 permalink: /tri1_blog/tanay_paranjpe
-Author: Aneesh Deevi, Moiz Lukmani, Perry Say
+Author: Tanay Paranjpe
 ---
 
 # Tri 1 Retrospective
 
-This post collects reflections, lessons, and next steps from the first trimester. It covers personal growth, three sprint highlights, N@tM feedback, project roadmap, learning goals, analytics and MCQ review, and one cool thing I want to share.
+This post collects reflections, lessons, and next steps from the first trimester. It covers personal growth, three sprint highlights, N@tM feedback, project roadmap, learning goals, analytics and MCQ review, and some cool things to share. 
 
-## 1) Where I am vs the beginning of the year
-- Beginning of the year: basic confidence with syntax, tentative about architecture and testing.
-- Now: clearer mental models for problem solving, more comfortable reading and modifying other people's code, and better at writing small, testable functions.
-- Concrete improvement: I write fewer "trial-and-error" runs in the REPL and more deliberate small tests.
+## 1) Where I am now vs the beginning of the year
+- Begining of the year: I had some basic experince in syntax, but didn't have expereince or proper understadning of tools, agile methogies, or genral pratcies to allow me to utlize the very basic syntix epxicne I had.
+-Early on, stuggels to understand what commands I was running, what they meant, and the peoper method to trouble shoot when they did not work properly. 
+Now: Much more conformatbel utlizing tools we used, and spent time to understand how they worked and how to trouble shot issues as they appear. (e.g. make doesn't properly run on new repo)
+- more comfortable reading and modifying other people's code, and better at utlizing agile methogies to increase teamwide effeicny. 
+-AI Usage impromenst:
+-Something I have deviklped trhoughout this year is my ability to best utlize AI models to help guide the prodictio nof my projets. I learnt how to create effent propmts and undertadn teh limits and cpaiabilites in ingrtaeting input into my own code. 
 
 ## 2) Key things from three sprints
 - Tools
   - Git workflows became routine (feature branches, PRs).
-  - Learned to use VS Code features: integrated terminal, test runner, and debugging.
-  - Basic automation: linting and simple scripts to run test suites.
+  - Learned to use VS Code features: integrated terminal,debugging, and scrum pratcies.
+  - Learnt how to push basic commits adn open depolyed sites diretcly through Github.
 
 - Fundamentals of JavaScript / Python
-  - Reinforced core concepts: scope, closures (JS), first-class functions, and list/dict comprehensions (Python).
+  - Reinforced core concepts of basic coding fundmentals, useful to me for both the AP exam but mroe importantly skills that are neccary in all forms of programming. 
   - Practice with conditionals and control flow improved the structure of my solutions.
-  - Unit testing basics: writing assertions, test setup/teardown patterns.
+  - frequent pratcie/homework allowed me to reinformce my leanring and apply my knowge to new prohjjects.  
 
 - West Coast Travel / Digital Famine (project sprint)
   - Product thinking: turning a dataset / theme into user stories and minimal viable features.
