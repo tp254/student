@@ -25,19 +25,21 @@ This post collects reflections, lessons, and next steps from the first trimester
   A big personal development this trimester was learning how to use AI tools effectively. I learned how to craft efficient prompts, integrate AI-generated ideas into my projects, and understand both the capabilities and limitations of these models. Instead of relying on AI to do the work, I use it as a guide to accelerate problem-solving and learning.
 
 
-## 2) Key things from three sprints
-- Tools
-  - Git workflows became routine (feature branches, PRs).
-  - Learned to use VS Code features: integrated terminal,debugging, and scrum pratcies.
-  - Learnt how to push basic commits adn open depolyed sites diretcly through Github.
+### Tools
+- Git workflows have become more natural for me, collaborating on multi-team projects, and commit etiquette are now part of my normal routine.  
+- I became comfortable with VS Code features like the integrated terminal and file organization. 
+- I learned how to push commits and deploy projects directly through GitHub.  
+- Scrum practices (daily class discussions, sprint reviews, retrospectives) helped me stay organized and communicate better with my team.
 
-- Fundamentals of JavaScript / Python
-  - Reinforced core concepts of basic coding fundmentals, useful to me for both the AP exam but mroe importantly skills that are neccary in all forms of programming. 
-  - Practice with conditionals and control flow improved the structure of my solutions.
-  - frequent pratcie/homework allowed me to reinformce my leanring and apply my knowge to new prohjjects.  
+
+### Fundamentals of JavaScript & Python
+- Reinforced key programming concepts like conditionals, loops, and control flow, which improved my ability to structure and organize code.  
+- Frequent practice through homework and sprint tasks helped me strengthen my understanding of both languages.  
+- These fundamentals are not just helpful for the AP exam, they’re also essential for real-world programming and logical thinking.
+
 
 - West Coast Travel / Digital Famine (project sprint)
-  - Product thinking: turning a dataset / theme into user stories and minimal viable features.
+  - Learnt how to appluy my skilsl working with team mates, but also acorss teh clasroom. Utlizing scrum methogy to creates PRs and to integrate projects across sub teams in the class. 
   - Data handling: simple ingestion and display; learned trade-offs between UX polish and shipping features.
   - Collaboration: splitting tasks, syncing on APIs and data formats.
 
