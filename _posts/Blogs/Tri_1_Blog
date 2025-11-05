@@ -10,13 +10,20 @@ Author: Tanay Paranjpe
 
 This post collects reflections, lessons, and next steps from the first trimester. It covers personal growth, three sprint highlights, N@tM feedback, project roadmap, learning goals, analytics and MCQ review, and some cool things to share. 
 
-## 1) Where I am now vs the beginning of the year
-- Begining of the year: I had some basic experince in syntax, but didn't have expereince or proper understadning of tools, agile methogies, or genral pratcies to allow me to utlize the very basic syntix epxicne I had.
--Early on, stuggels to understand what commands I was running, what they meant, and the peoper method to trouble shoot when they did not work properly. 
-Now: Much more conformatbel utlizing tools we used, and spent time to understand how they worked and how to trouble shot issues as they appear. (e.g. make doesn't properly run on new repo)
-- more comfortable reading and modifying other people's code, and better at utlizing agile methogies to increase teamwide effeicny. 
--AI Usage impromenst:
--Something I have deviklped trhoughout this year is my ability to best utlize AI models to help guide the prodictio nof my projets. I learnt how to create effent propmts and undertadn teh limits and cpaiabilites in ingrtaeting input into my own code. 
+-
+
+## 1) Where I Am Now vs. the Beginning of the Year
+
+- **At the beginning of the year:**  
+  I came in with some basic experience in syntax, but I didn’t have a strong understanding of tools, agile methodologies, or general coding practices. I often ran commands without fully understanding what they did, and I struggled to troubleshoot issues when things broke.  
+
+- **Now:**  
+  I’ve grown much more confident using the tools we work with every day. I take the time to understand how they function and how to fix problems when they appear (for example, when `make` doesn’t run properly on a new repo).  
+  I’m more comfortable reading and modifying other people’s code and have learned how to apply agile methods effectively to improve team efficiency and collaboration.
+
+- **AI usage improvements:**  
+  A big personal development this trimester was learning how to use AI tools effectively. I learned how to craft efficient prompts, integrate AI-generated ideas into my projects, and understand both the capabilities and limitations of these models. Instead of relying on AI to do the work, I use it as a guide to accelerate problem-solving and learning.
+
 
 ## 2) Key things from three sprints
 - Tools
