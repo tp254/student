@@ -15,7 +15,7 @@ College students Michael Hayes, Tanisha Patel, Aadit Mathur, and Neha shared the
 ## Main Points
 
 **No single path into CS**  
-Everyone came from different places - some switched majors, others started late. Many found CS through random stuff like Legos, photography, or design. You don't need to have it figured out early.
+Everyone came from different places - some switched majors, others started late. Many found CS through random things they enjoyed. You don't need to have it figured out early.
 
 **High school actually matters**  
 AP classes and CS courses aren't just for your transcript. They help with time management, communication, and problem-solving.
@@ -33,13 +33,13 @@ Explaining your code, writing comments, documenting stuff - all just as importan
 Most panelists wrote about impact, curiosity, or community. Not just "here's all the code I wrote."
 
 **PBL is really valuable**  
-Project-based learning teaches you how things actually work in the real world.
+Project-based learning teaches you how things actually work in the real world. Important to also build what lessons you learnt and what you want to carry forward.
 
 ## Q&A Highlights
 
 ### Why CS?
 - Neha: wanted law school, changed mind after reflecting
-- Aadit: liked building Legos as a kid
+- Aadit: liked building Legos as a kid, translated to FTC/robotics and continued passion. 
 - Michael: film background, found similar creative satisfaction in CS
 - Tanisha: liked Del Norte's curriculum
 
@@ -94,5 +94,5 @@ CS isn't about being naturally good at programming. It's more about:
 - Solving real problems
 - Having balance
 
-There's no right way to do this. Find what you like, build skills slowly, stay open to new stuff. Small steps add up.
+There's no right way to do this. Find what you like, build skills slowly, stay open to new stuff. Small steps add up. Don't be afraid to put yourself out there and go after every opportunity that you see available. It's very important to "learn by doing" rather than listening to a teacher give a presentation.
 
