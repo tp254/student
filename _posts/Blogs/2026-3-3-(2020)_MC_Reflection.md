@@ -10,7 +10,7 @@ permalink: /blogs/2020-mc-reflection
 
 ### Overall Score: 54/67
 
-![2020 Practice Exam MCQ Score]({{site.baseurl}}/images/2020-mc-overall-score.png)
+![Skills Breakdown by Topic]({{site.baseurl}}/images/2020-mc-skills-breakdown.png)
 
 ---
 
@@ -236,7 +236,7 @@ I didn't carefully trace the order of concatenation and substrings. The solution
 
 **Content & Skills Performance by Topic:**
 
-![Skills Breakdown by Topic]({{site.baseurl}}/images/2020-mc-skills-breakdown.png)
+![2020 Practice Exam MCQ Score]({{site.baseurl}}/images/2020-mc-overall-score.png)
 
 ### Skills I Struggled With Most:
 
