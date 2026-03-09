@@ -11,7 +11,6 @@ permalink: /blogs/2020-mc-reflection
 ### Overall Score: 54/67
 
 ![Skills Breakdown by Topic]({{site.baseurl}}/images/2020-mc-skills-breakdown.png)
-
 ---
 
 ### Question 1
