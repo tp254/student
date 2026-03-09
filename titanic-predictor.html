@@ -1,0 +1,597 @@
+---
+layout: base
+title: Titanic Survival Predictor
+description: Predict your chances of surviving the Titanic disaster using machine learning
+permalink: /titanic/predictor/
+---
+
+<style>
+    body {
+        background: #000000;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+    
+    .predictor-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+    .predictor-card {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        animation: slideUp 0.5s ease;
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        font-size: 0.95rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #444;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #2a2a2a;
+        color: #ffffff;
+        transition: border-color 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+    }
+    
+    .form-group input::placeholder {
+        color: #888;
+    }
+    
+    .form-group select option {
+        background: #2a2a2a;
+        color: #ffffff;
+    }
+    
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .predict-btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        flex: 2;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .predict-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+    }
+    
+    .predict-btn:active {
+        transform: translateY(0);
+    }
+    
+    .results-container {
+        display: none;
+        margin-top: 2rem;
+    }
+    
+    .probability-card {
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .survive-card {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        color: white;
+    }
+    
+    .die-card {
+        background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+        color: white;
+    }
+    
+    .probability-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0.25rem 0;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .probability-label {
+        font-size: 1rem;
+        font-weight: 500;
+        opacity: 0.95;
+    }
+    
+    .feature-weights {
+        background: #2a2a2a;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .feature-weights h3 {
+        margin-top: 0;
+        color: #ffffff;
+    }
+    
+    .feature-bar {
+        margin: 1rem 0;
+    }
+    
+    .feature-name {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+        color: #e0e0e0;
+    }
+    
+    .bar-container {
+        background: #3a3a3a;
+        border-radius: 8px;
+        height: 24px;
+        overflow: hidden;
+    }
+    
+    .bar-fill {
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        transition: width 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 8px;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .loading {
+        display: none;
+        text-align: center;
+        padding: 2rem;
+        color: #ffffff;
+    }
+    
+    .spinner {
+        border: 4px solid #333;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        
+        .predictor-card {
+            padding: 1.5rem;
+        }
+        
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+        
+        .button-group {
+            flex-direction: column;
+        }
+        
+        .probability-value {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .info-box {
+        background: #2a2a2a;
+        border-left: 4px solid #667eea;
+        padding: 1.25rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+    
+    .info-box p {
+        margin: 0;
+        color: #e0e0e0;
+        font-weight: 500;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    }
+    
+    .subtitle {
+        text-align: center;
+        color: #e0e0e0;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .button-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .autofill-btn {
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex: 1;
+    }
+    
+    .autofill-btn:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+    }
+    
+    .autofill-btn:active {
+        transform: translateY(0);
+    }
+</style>
+
+<div class="predictor-container">
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <h1>Titanic Survival Predictor</h1>
+        <p class="subtitle">Enter passenger information to predict survival probability using machine learning</p>
+    </div>
+    
+    <div class="predictor-card">
+        <form id="titanicForm">
+            <div class="form-group">
+                <label for="name">Passenger Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pclass">Passenger Class</label>
+                    <select id="pclass" name="pclass" required>
+                        <option value="">Select class</option>
+                        <option value="1">1st Class (Upper)</option>
+                        <option value="2">2nd Class (Middle)</option>
+                        <option value="3">3rd Class (Lower)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex" required>
+                        <option value="">Select sex</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="0" max="100" placeholder="Enter age" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fare">Fare (£)</label>
+                    <input type="number" id="fare" name="fare" min="0" step="0.01" placeholder="Enter fare" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sibsp">Siblings/Spouses Aboard</label>
+                    <input type="number" id="sibsp" name="sibsp" min="0" max="10" value="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="parch">Parents/Children Aboard</label>
+                    <input type="number" id="parch" name="parch" min="0" max="10" value="0" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="embarked">Port of Embarkation</label>
+                    <select id="embarked" name="embarked" required>
+                        <option value="">Select port</option>
+                        <option value="C">Cherbourg, France</option>
+                        <option value="Q">Queenstown, Ireland</option>
+                        <option value="S">Southampton, England</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="alone">Traveling Alone?</label>
+                    <select id="alone" name="alone" required>
+                        <option value="false">No (with family)</option>
+                        <option value="true">Yes (alone)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button type="button" class="autofill-btn" onclick="fillExampleData()">Try Example</button>
+                <button type="submit" class="predict-btn">Predict Survival</button>
+            </div>
+        </form>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Calculating survival probability...</p>
+        </div>
+    </div>
+    
+    <div class="results-container" id="results">
+        <div class="predictor-card">
+            <h2 style="text-align: center; margin-top: 0; color: #ffffff; font-size: 1.5rem;">Prediction Results</h2>
+            <div id="passengerInfo" style="text-align: center; margin-bottom: 1rem; color: #e0e0e0; font-size: 1rem; font-weight: 500;"></div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div class="probability-card survive-card">
+                    <div class="probability-label">Survival Probability</div>
+                    <div class="probability-value" id="surviveProb">--</div>
+                </div>
+                
+                <div class="probability-card die-card">
+                    <div class="probability-label">Death Probability</div>
+                    <div class="probability-value" id="dieProb">--</div>
+                </div>
+            </div>
+            
+            <div class="feature-weights" id="featureWeights" style="display: none;">
+                <h3>Feature Importance</h3>
+                <p style="color: #b0b0b0; font-size: 0.9rem; margin-bottom: 1rem;">
+                    These factors influence the survival prediction the most:
+                </p>
+                <div id="featureBars"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Logistic Regression Model - trained on Titanic dataset
+    // These coefficients are from the trained model in your notebook
+    const model = {
+        intercept: 2.2420,
+        coefficients: {
+            'pclass': -0.8648,
+            'sex': -2.5207,      // 1 = male, 0 = female
+            'age': -0.0367,
+            'sibsp': -0.3398,
+            'parch': -0.0866,
+            'fare': 0.0015,
+            'alone': -0.4037,
+            'embarked_C': 0.5838,
+            'embarked_Q': -0.0128,
+            'embarked_S': -0.3594
+        }
+    };
+    
+    // Sigmoid function for logistic regression
+    function sigmoid(z) {
+        return 1 / (1 + Math.exp(-z));
+    }
+    
+    // Predict survival probability
+    function predictSurvival(passenger) {
+        // Convert sex to binary
+        const sexBinary = passenger.sex === 'male' ? 1 : 0;
+        const aloneBinary = passenger.alone ? 1 : 0;
+        
+        // One-hot encode embarked port
+        const embarked_C = passenger.embarked === 'C' ? 1 : 0;
+        const embarked_Q = passenger.embarked === 'Q' ? 1 : 0;
+        const embarked_S = passenger.embarked === 'S' ? 1 : 0;
+        
+        // Calculate linear combination
+        let z = model.intercept;
+        z += model.coefficients.pclass * passenger.pclass;
+        z += model.coefficients.sex * sexBinary;
+        z += model.coefficients.age * passenger.age;
+        z += model.coefficients.sibsp * passenger.sibsp;
+        z += model.coefficients.parch * passenger.parch;
+        z += model.coefficients.fare * passenger.fare;
+        z += model.coefficients.alone * aloneBinary;
+        z += model.coefficients.embarked_C * embarked_C;
+        z += model.coefficients.embarked_Q * embarked_Q;
+        z += model.coefficients.embarked_S * embarked_S;
+        
+        // Apply sigmoid to get probability
+        const survivalProb = sigmoid(z);
+        const deathProb = 1 - survivalProb;
+        
+        return {
+            survive: survivalProb,
+            die: deathProb
+        };
+    }
+    
+    const form = document.getElementById('titanicForm');
+    const loading = document.getElementById('loading');
+    const results = document.getElementById('results');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(form);
+        const passenger = {
+            name: formData.get('name'),
+            pclass: parseInt(formData.get('pclass')),
+            sex: formData.get('sex'),
+            age: parseFloat(formData.get('age')),
+            sibsp: parseInt(formData.get('sibsp')),
+            parch: parseInt(formData.get('parch')),
+            fare: parseFloat(formData.get('fare')),
+            embarked: formData.get('embarked'),
+            alone: formData.get('alone') === 'true'
+        };
+        
+        // Show loading
+        loading.style.display = 'block';
+        results.style.display = 'none';
+        
+        // Simulate brief loading for better UX
+        setTimeout(() => {
+            // Make prediction using client-side model
+            const prediction = predictSurvival(passenger);
+            
+            // Display results
+            displayResults(passenger, prediction);
+            
+            // Show feature importance
+            displayFeatureImportance();
+            
+            loading.style.display = 'none';
+        }, 500);
+    });
+    
+    function displayResults(passenger, data) {
+        // Format passenger info
+        const className = ['', '1st Class', '2nd Class', '3rd Class'][passenger.pclass];
+        const passengerInfo = document.getElementById('passengerInfo');
+        passengerInfo.innerHTML = `
+            <strong>${passenger.name}</strong> • 
+            ${className} • 
+            ${passenger.sex} • 
+            Age ${passenger.age}
+        `;
+        
+        // Display probabilities
+        const surviveProb = document.getElementById('surviveProb');
+        const dieProb = document.getElementById('dieProb');
+        
+        surviveProb.textContent = (data.survive * 100).toFixed(1) + '%';
+        dieProb.textContent = (data.die * 100).toFixed(1) + '%';
+        
+        // Show results
+        results.style.display = 'block';
+        results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    
+    function displayFeatureImportance() {
+        // Feature importance from Decision Tree analysis in your notebook
+        // These show which factors most influence survival
+        const featureWeights = {
+            'sex': 0.35,
+            'pclass': 0.22,
+            'fare': 0.18,
+            'age': 0.12,
+            'alone': 0.08,
+            'sibsp': 0.03,
+            'parch': 0.02
+        };
+        
+        const featureWeightsDiv = document.getElementById('featureWeights');
+        const featureBars = document.getElementById('featureBars');
+        
+        // Convert to array and sort by importance
+        const sortedFeatures = Object.entries(featureWeights)
+            .sort((a, b) => b[1] - a[1]);
+        
+        // Create bars
+        featureBars.innerHTML = sortedFeatures.map(([feature, importance]) => {
+            const percentage = (importance * 100).toFixed(1);
+            const featureLabels = {
+                'sex': 'Gender',
+                'pclass': 'Passenger Class',
+                'fare': 'Fare Price',
+                'age': 'Age',
+                'alone': 'Traveling Alone',
+                'sibsp': 'Siblings/Spouses',
+                'parch': 'Parents/Children'
+            };
+            
+            return `
+                <div class="feature-bar">
+                    <span class="feature-name">${featureLabels[feature] || feature}</span>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: ${percentage}%;">
+                            ${percentage}%
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        featureWeightsDiv.style.display = 'block';
+    }
+    
+    // Pre-fill form with example data for testing
+    function fillExampleData() {
+        document.getElementById('name').value = 'Rose DeWitt Bukater';
+        document.getElementById('pclass').value = '1';
+        document.getElementById('sex').value = 'female';
+        document.getElementById('age').value = '17';
+        document.getElementById('fare').value = '100.00';
+        document.getElementById('sibsp').value = '0';
+        document.getElementById('parch').value = '2';
+        document.getElementById('embarked').value = 'S';
+        document.getElementById('alone').value = 'false';
+        
+        // Scroll to the predict button
+        document.querySelector('.button-group').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>

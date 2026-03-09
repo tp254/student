@@ -19,4 +19,5 @@ header_pages:
   - navigation/blog.md
   - navigation/search.md
   - navigation/about.md
+  - navigation/titanic.md
   - navigation/logintoolkit.md
