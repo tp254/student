@@ -3,7 +3,6 @@ layout: page
 title: AP Exam Study Plan
 permalink: /ap-plan/
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,12 +48,13 @@ nav{position:sticky;top:0;z-index:200;background:rgba(12,12,14,0.9);backdrop-fil
 
 /* HERO */
 .hero{padding:clamp(2.5rem,7vw,5.5rem) clamp(1rem,4vw,3.5rem) clamp(1.5rem,4vw,3rem);border-bottom:1px solid var(--b1);position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;top:-30%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(245,197,24,0.035) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:1400px;margin:0 auto}
+.hero::after{content:'';position:absolute;top:-30%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,197,24,0.035) 0%,transparent 65%);pointer-events:none}
 .hero-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.15em;color:var(--acc);text-transform:uppercase;margin-bottom:.9rem}
 h1{font-size:clamp(2.4rem,6.5vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.2rem;max-width:780px}
 h1 em{font-style:normal;color:var(--acc)}
-.hero-sub{font-size:14px;color:var(--t2);max-width:480px;line-height:1.75;margin-bottom:2.2rem}
-.countdown-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+.hero-sub{font-size:14px;color:var(--t2);max-width:560px;line-height:1.75;margin-bottom:2.2rem}
+.countdown-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
 .cd-card{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:14px 16px;transition:border-color .2s}
 .cd-card:hover{border-color:var(--b2)}
 .cd-card.is-warn{border-color:rgba(251,191,36,0.2);background:var(--warn-b)}
@@ -65,12 +65,12 @@ h1 em{font-style:normal;color:var(--acc)}
 .cd-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2);margin-top:8px;padding-top:8px;border-top:1px solid var(--b1)}
 
 /* ALERT */
-.alert-wrap{padding:0 clamp(1rem,4vw,3.5rem);margin-top:1.25rem}
+.alert-wrap{padding:1.25rem clamp(1rem,4vw,3.5rem) 0;max-width:1400px;width:100%;margin:0 auto}
 .alert{background:var(--warn-b);border:1px solid rgba(251,191,36,0.2);border-radius:9px;padding:11px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--warn);display:flex;align-items:flex-start;gap:10px}
 .alert-icon{width:18px;height:18px;min-width:18px;border-radius:50%;border:1px solid var(--warn);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px}
 
 /* MAIN */
-main{padding:2rem clamp(1rem,4vw,3.5rem) 4rem;max-width:1080px}
+main{padding:2rem clamp(1rem,4vw,3.5rem) 4rem;max-width:1400px;width:100%;margin:0 auto}
 
 /* LEGEND */
 .legend{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:1px solid var(--b1)}
@@ -97,7 +97,7 @@ main{padding:2rem clamp(1rem,4vw,3.5rem) 4rem;max-width:1080px}
 .wk-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:3px}
 .wk-name{font-size:14px;font-weight:700}
 .wk-dates{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2)}
-.wk-focus{font-size:12px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:480px}
+.wk-focus{font-size:12px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:min(640px,60vw)}
 .wk-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .wk-prog{display:flex;align-items:center;gap:7px}
 .wk-prog-bar{width:60px;height:4px;background:var(--s3);border-radius:2px;overflow:hidden}
@@ -137,64 +137,129 @@ main{padding:2rem clamp(1rem,4vw,3.5rem) 4rem;max-width:1080px}
 .chk-item.checked label{color:var(--t3);text-decoration:line-through;text-decoration-color:var(--t3)}
 
 /* STRATEGY */
-.strat-sec{padding:2rem clamp(1rem,4vw,3.5rem) 3rem;border-top:1px solid var(--b1);max-width:1080px}
+.strat-sec{padding:2rem clamp(1rem,4vw,3.5rem) 3rem;border-top:1px solid var(--b1);max-width:1400px;width:100%;margin:0 auto}
 .strat-sec h2{font-size:1.3rem;font-weight:700;margin-bottom:1.25rem}
-.strat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.strat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
 .strat-card{background:var(--s1);border:1px solid var(--b1);border-radius:11px;padding:18px}
 .strat-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}
 .strat-txt{font-size:12px;color:var(--t2);line-height:1.7}
 .strat-txt strong{color:var(--t1);font-weight:600}
 
 /* FOOTER */
-footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;max-width:1400px;width:100%;margin:0 auto}
 .foot-txt{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3)}
 
-/* AI PANEL */
-.ai-fab{position:fixed;bottom:24px;right:24px;z-index:500;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(79,70,229,0.4);transition:transform .2s,box-shadow .2s}
-.ai-fab:hover{transform:scale(1.07);box-shadow:0 6px 28px rgba(79,70,229,0.5)}
-.ai-fab svg{width:22px;height:22px;fill:white}
-.ai-badge{position:absolute;top:-2px;right:-2px;width:14px;height:14px;border-radius:50%;background:var(--acc);border:2px solid var(--bg);display:none}
-.ai-badge.show{display:block}
+/* EDIT PANEL */
+.edit-fab{position:fixed;bottom:24px;right:24px;z-index:500;width:52px;height:52px;border-radius:50%;background:var(--s2);border:1px solid var(--b2);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .2s,border-color .2s;font-size:20px}
+.edit-fab:hover{transform:scale(1.07);border-color:var(--acc)}
 
-.ai-panel{position:fixed;bottom:0;right:0;z-index:490;width:min(420px,100vw);height:min(580px,100vh);background:var(--s1);border:1px solid var(--b2);border-bottom:none;border-right:none;border-radius:16px 0 0 0;display:flex;flex-direction:column;transform:translateY(110%);transition:transform .3s cubic-bezier(.16,1,.3,1);box-shadow:-4px -4px 40px rgba(0,0,0,.4)}
-.ai-panel.open{transform:translateY(0)}
-.ai-panel-h{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--b1);flex-shrink:0}
-.ai-panel-title{display:flex;align-items:center;gap:9px}
-.ai-dot{width:8px;height:8px;border-radius:50%;background:var(--ai);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.ai-title-txt{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--ai);letter-spacing:.08em;text-transform:uppercase}
-.ai-close{background:transparent;border:none;color:var(--t3);font-size:18px;cursor:pointer;line-height:1;padding:2px 6px;border-radius:4px}
-.ai-close:hover{color:var(--t1);background:var(--s3)}
-.ai-msgs{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:90%;padding:9px 13px;border-radius:10px;font-size:12px;line-height:1.6;word-break:break-word}
-.msg.ai{background:var(--s2);border:1px solid var(--b1);color:var(--t1);align-self:flex-start;border-radius:3px 10px 10px 10px}
-.msg.user{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:white;align-self:flex-end;border-radius:10px 3px 10px 10px}
-.msg.sys{background:var(--warn-b);border:1px solid rgba(251,191,36,0.15);color:var(--warn);font-size:11px;align-self:center;text-align:center;border-radius:8px}
-.msg-loading{display:flex;gap:5px;padding:12px 14px;align-self:flex-start;background:var(--s2);border:1px solid var(--b1);border-radius:3px 10px 10px 10px}
-.msg-loading span{width:6px;height:6px;border-radius:50%;background:var(--t3);animation:bounce .9s infinite}
-.msg-loading span:nth-child(2){animation-delay:.15s}
-.msg-loading span:nth-child(3){animation-delay:.3s}
-@keyframes bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}
-.apply-btn{margin-top:8px;background:var(--acc);color:#000;border:none;border-radius:7px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;cursor:pointer;transition:opacity .15s}
-.apply-btn:hover{opacity:.85}
+.edit-panel{position:fixed;bottom:0;right:0;z-index:490;width:min(460px,100vw);height:min(640px,100vh);background:var(--s1);border:1px solid var(--b2);border-bottom:none;border-right:none;border-radius:16px 0 0 0;display:flex;flex-direction:column;transform:translateY(110%);transition:transform .3s cubic-bezier(.16,1,.3,1);box-shadow:-4px -4px 40px rgba(0,0,0,.5)}
+.edit-panel.open{transform:translateY(0)}
+.ep-h{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--b1);flex-shrink:0}
+.ep-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--acc);letter-spacing:.1em;text-transform:uppercase}
+.ep-close{background:transparent;border:none;color:var(--t3);font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;border-radius:4px}
+.ep-close:hover{color:var(--t1);background:var(--s3)}
+.ep-body{flex:1;overflow-y:auto;padding:16px}
+.ep-section{margin-bottom:20px}
+.ep-section-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.ep-section-lbl::after{content:'';flex:1;height:1px;background:var(--b1)}
+.ep-btn{width:100%;background:var(--s2);border:1px solid var(--b1);border-radius:8px;color:var(--t1);font-family:'Syne',sans-serif;font-size:12px;padding:10px 14px;cursor:pointer;text-align:left;transition:all .15s;display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.ep-btn:hover{border-color:var(--b2);background:var(--s3)}
+.ep-btn .ep-icon{font-size:14px;flex-shrink:0}
+.ep-btn .ep-desc{font-size:11px;color:var(--t2);margin-top:2px}
+.ep-btn-wrap{display:flex;flex-direction:column}
+.ep-form{background:var(--s2);border:1px solid var(--b1);border-radius:10px;padding:14px;display:none}
+.ep-form.open{display:block}
+.ep-field{margin-bottom:12px}
+.ep-field label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3);display:block;margin-bottom:5px;font-weight:500}
+.ep-input{width:100%;background:var(--bg);border:1px solid var(--b2);border-radius:6px;color:var(--t1);font-family:'Syne',sans-serif;font-size:12px;padding:8px 10px;outline:none;transition:border-color .15s}
+.ep-input:focus{border-color:var(--acc)}
+.ep-select{width:100%;background:var(--bg);border:1px solid var(--b2);border-radius:6px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:11px;padding:7px 10px;outline:none;cursor:pointer}
+.ep-textarea{width:100%;background:var(--bg);border:1px solid var(--b2);border-radius:6px;color:var(--t1);font-family:'Syne',sans-serif;font-size:12px;padding:8px 10px;outline:none;resize:vertical;min-height:60px;transition:border-color .15s;line-height:1.5}
+.ep-textarea:focus{border-color:var(--acc)}
+.ep-actions{display:flex;gap:8px;margin-top:4px}
+.ep-save{background:var(--acc);color:#000;border:none;border-radius:7px;padding:8px 18px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;cursor:pointer;transition:opacity .15s}
+.ep-save:hover{opacity:.85}
+.ep-cancel{background:transparent;border:1px solid var(--b2);border-radius:7px;padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2);cursor:pointer;transition:all .15s}
+.ep-cancel:hover{border-color:var(--b3);color:var(--t1)}
+.ep-danger{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.2);border-radius:7px;padding:8px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--phys);cursor:pointer;transition:all .15s}
+.ep-danger:hover{background:rgba(248,113,113,0.15)}
+.ep-chk-list{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+.ep-chk-row{display:flex;gap:6px;align-items:center}
+.ep-chk-row input[type=text]{flex:1;background:var(--bg);border:1px solid var(--b2);border-radius:5px;color:var(--t1);font-size:11px;padding:5px 8px;outline:none;font-family:'Syne',sans-serif}
+.ep-chk-row input[type=text]:focus{border-color:var(--acc)}
+.ep-rm{background:transparent;border:none;color:var(--t3);cursor:pointer;font-size:14px;padding:2px 4px;border-radius:3px;line-height:1}
+.ep-rm:hover{color:var(--phys)}
+.ep-add-item{background:transparent;border:1px dashed var(--b2);border-radius:6px;color:var(--t3);font-size:11px;padding:6px 12px;cursor:pointer;width:100%;transition:all .15s;font-family:'JetBrains Mono',monospace}
+.ep-add-item:hover{border-color:var(--acc);color:var(--acc)}
+.day-action-row{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.day-reschedule-btn{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.05em;padding:4px 10px;border-radius:5px;border:1px solid var(--b1);background:transparent;color:var(--t3);cursor:pointer;transition:all .15s}
+.day-reschedule-btn:hover{border-color:var(--warn);color:var(--warn)}
+.day-add-btn{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.05em;padding:4px 10px;border-radius:5px;border:1px dashed var(--b1);background:transparent;color:var(--t3);cursor:pointer;transition:all .15s}
+.day-add-btn:hover{border-color:var(--bio);color:var(--bio)}
+.task-menu-btn{background:transparent;border:none;color:var(--t3);cursor:pointer;font-size:12px;padding:2px 5px;border-radius:4px;opacity:0;transition:opacity .15s;flex-shrink:0;line-height:1}
+.task:hover .task-menu-btn{opacity:1}
+.task-menu-btn:hover{color:var(--t1);background:var(--s3)}
+.ep-toast{position:fixed;bottom:90px;right:24px;z-index:600;background:var(--ok-b);border:1px solid rgba(52,211,153,0.3);color:var(--ok);font-family:'JetBrains Mono',monospace;font-size:11px;padding:9px 16px;border-radius:8px;transform:translateY(20px);opacity:0;transition:all .25s;pointer-events:none}
+.ep-toast.show{transform:translateY(0);opacity:1}
+/* VIEW TABS */
+.view-tabs{display:flex;align-items:center;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
+.view-tab{background:transparent;border:1px solid var(--b1);border-radius:7px;color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:6px 16px;cursor:pointer;transition:all .15s;letter-spacing:.06em}
+.view-tab:hover{border-color:var(--b2);color:var(--t1)}
+.view-tab.active{background:var(--acc);border-color:var(--acc);color:#000}
+.legend-inline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-left:8px}
+.overall-prog{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3);margin-left:auto}
 
-.ai-input-row{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--b1);flex-shrink:0}
-.ai-input{flex:1;background:var(--s2);border:1px solid var(--b2);border-radius:8px;color:var(--t1);font-family:'Syne',sans-serif;font-size:12px;padding:9px 12px;resize:none;min-height:38px;max-height:100px;overflow-y:auto;outline:none;transition:border-color .15s}
-.ai-input:focus{border-color:var(--ai)}
-.ai-input::placeholder{color:var(--t3)}
-.ai-send{background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;border-radius:8px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:opacity .15s}
-.ai-send:hover{opacity:.85}
-.ai-send svg{width:16px;height:16px;fill:white}
-.ai-send:disabled{opacity:.4;cursor:not-allowed}
+/* CAL LAYOUT */
+.cal-layout{display:grid;grid-template-columns:minmax(320px,400px) 1fr;gap:16px;align-items:start}
+@media(max-width:860px){.cal-layout{grid-template-columns:1fr}}
 
-.ai-key-banner{background:var(--ai-b);border:1px solid rgba(129,140,248,0.2);border-radius:8px;padding:11px 13px;margin:0 14px 12px;font-size:11px;color:var(--ai);font-family:'JetBrains Mono',monospace;display:flex;flex-direction:column;gap:8px}
-.ai-key-input{background:var(--s2);border:1px solid var(--b2);border-radius:6px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:11px;padding:7px 10px;outline:none;width:100%;transition:border-color .15s}
-.ai-key-input:focus{border-color:var(--ai)}
-.ai-key-save{background:var(--ai);color:white;border:none;border-radius:6px;padding:6px 14px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;cursor:pointer;transition:opacity .15s}
-.ai-key-save:hover{opacity:.85}
-.ai-suggestions{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
-.ai-sug{background:var(--s2);border:1px solid var(--b1);border-radius:16px;padding:5px 12px;font-size:11px;color:var(--t2);cursor:pointer;transition:all .15s;white-space:nowrap}
-.ai-sug:hover{border-color:var(--ai);color:var(--ai)}
+/* CAL LEFT */
+.cal-left{background:var(--s1);border:1px solid var(--b1);border-radius:14px;overflow:hidden;position:sticky;top:68px}
+.cal-month-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;border-bottom:1px solid var(--b1)}
+.cal-month-lbl{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--t1);letter-spacing:.06em;text-transform:uppercase}
+.cal-nav-btn{background:transparent;border:1px solid var(--b1);border-radius:6px;color:var(--t2);width:28px;height:28px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .15s;line-height:1}
+.cal-nav-btn:hover{border-color:var(--b2);color:var(--t1)}
+.cal-nav-btn:disabled{opacity:.3;cursor:not-allowed}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);padding:0 10px;margin-bottom:4px}
+.cal-dow-row span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);text-align:center;padding:6px 0;font-weight:700;letter-spacing:.06em}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:0 10px 12px}
+.cal-cell{border-radius:8px;padding:5px 4px 6px;cursor:pointer;transition:background .12s;min-height:62px;display:flex;flex-direction:column;position:relative}
+.cal-cell:hover{background:var(--s2)}
+.cal-cell.selected{background:var(--s3);outline:1px solid var(--acc)}
+.cal-cell.is-today .cal-dn{background:var(--acc);color:#000;border-radius:50%}
+.cal-cell.out-of-range{opacity:.2;cursor:default;pointer-events:none}
+.cal-cell.is-exam{outline:1px solid rgba(245,197,24,0.35)}
+.cal-dn{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--t2);width:20px;height:20px;display:flex;align-items:center;justify-content:center;margin-bottom:3px;transition:color .12s;flex-shrink:0}
+.cal-cell:hover .cal-dn,.cal-cell.selected .cal-dn{color:var(--t1)}
+.cal-cell.is-today .cal-dn{color:#000}
+.cal-dots{display:flex;flex-wrap:wrap;gap:2px;margin-top:auto}
+.cal-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cal-dot.bio{background:var(--bio)}
+.cal-dot.phys{background:var(--phys)}
+.cal-dot.csp{background:var(--csp)}
+.cal-dot.calc{background:var(--calc)}
+.cal-dot.eng{background:var(--eng)}
+.cal-dot.exam{background:var(--exam)}
+.cal-r-badge{position:absolute;top:4px;right:4px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;color:rgba(245,197,24,0.4)}
+.cal-day-prog{width:100%;height:2px;background:var(--s3);border-radius:1px;margin-top:4px;overflow:hidden}
+.cal-day-prog-fill{height:100%;border-radius:1px;background:var(--ok);transition:width .3s}
+.cal-mini-legend{display:flex;align-items:center;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);padding:8px 16px 12px;border-top:1px solid var(--b1);flex-wrap:wrap;gap:4px}
+.cal-mini-legend span{width:7px;height:7px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:2px}
+.dot-bio{background:var(--bio)}.dot-phys{background:var(--phys)}.dot-csp{background:var(--csp)}
+.dot-calc{background:var(--calc)}.dot-eng{background:var(--eng)}.dot-exam{background:var(--exam)}
+
+/* CAL RIGHT */
+.cal-right{min-height:400px}
+.cal-detail{background:var(--s1);border:1px solid var(--b1);border-radius:14px;overflow:hidden}
+.cal-detail-empty{padding:3rem 2rem;text-align:center}
+.cal-detail-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--b1)}
+.cal-detail-date{display:flex;flex-direction:column;gap:2px}
+.cal-detail-dayname{font-size:20px;font-weight:700;color:var(--t1)}
+.cal-detail-full{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2)}
+.cal-detail-meta{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.cal-detail-tasks{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.cal-no-tasks{padding:2rem;text-align:center;font-size:13px;color:var(--t2)}
 </style>
 </head>
 <body>
@@ -203,15 +268,18 @@ footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);dis
   <div class="logo">AP Study Plan // 2026</div>
   <div class="nav-right">
     <div class="nav-dates" id="nav-dates"></div>
-    <button class="nav-btn-key" onclick="openKeyModal()">API Key</button>
+    <button class="nav-btn-key" onclick="openEditor()">Edit Schedule</button>
+    <button class="nav-btn-key" onclick="resetSchedule()" style="color:var(--phys);border-color:rgba(248,113,113,0.3)">Reset</button>
   </div>
 </nav>
 
 <section class="hero">
+  <div class="hero-inner">
   <div class="hero-tag">May 2026 Exam Season</div>
   <h1>5 APs.<br><em>One plan.</em></h1>
   <p class="hero-sub">Bio · Physics C Mech · Calc BC · English Lang · CSP — built around robotics 3–4 days/week and 1.5–2.5 hrs study time daily.</p>
   <div class="countdown-grid" id="cd-grid"></div>
+  </div>
 </section>
 
 <div class="alert-wrap">
@@ -222,17 +290,70 @@ footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);dis
 </div>
 
 <main id="main-content">
-  <div class="legend">
-    <span class="leg-lbl">Subjects:</span>
-    <span class="tag t-bio">Bio</span>
-    <span class="tag t-phys">Physics C</span>
-    <span class="tag t-csp">CSP</span>
-    <span class="tag t-calc">Calc BC</span>
-    <span class="tag t-eng">Eng Lang</span>
-    <span class="tag t-exam">Exam Day</span>
-    <span class="leg-note">R = robotics day (budget ~1.5 hrs)</span>
+  <!-- VIEW TABS -->
+  <div class="view-tabs">
+    <button class="view-tab active" id="tab-cal" onclick="setView('calendar')">Calendar</button>
+    <button class="view-tab" id="tab-sch" onclick="setView('schedule')">Schedule</button>
+    <div class="legend-inline">
+      <span class="tag t-bio">Bio</span>
+      <span class="tag t-phys">Physics C</span>
+      <span class="tag t-csp">CSP</span>
+      <span class="tag t-calc">Calc BC</span>
+      <span class="tag t-eng">Eng Lang</span>
+      <span class="tag t-exam">Exam</span>
+      <span class="leg-note">R = robotics day</span>
+    </div>
+    <div class="overall-prog" id="overall-prog"></div>
   </div>
-  <div id="weeks-container"></div>
+
+  <!-- CALENDAR VIEW -->
+  <div id="view-calendar" class="view-pane">
+    <div class="cal-layout">
+      <div class="cal-left" id="cal-left">
+        <div class="cal-month-nav">
+          <button class="cal-nav-btn" id="cal-prev" onclick="calPrev()">‹</button>
+          <span class="cal-month-lbl" id="cal-month-lbl"></span>
+          <button class="cal-nav-btn" id="cal-next" onclick="calNext()">›</button>
+        </div>
+        <div class="cal-dow-row">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="cal-mini-legend">
+          <span class="dot-bio"></span>Bio &nbsp;
+          <span class="dot-phys"></span>Phys &nbsp;
+          <span class="dot-csp"></span>CSP &nbsp;
+          <span class="dot-calc"></span>Calc &nbsp;
+          <span class="dot-eng"></span>Eng &nbsp;
+          <span class="dot-exam"></span>Exam
+        </div>
+      </div>
+      <div class="cal-right" id="cal-right">
+        <div class="cal-detail" id="cal-detail">
+          <div class="cal-detail-empty">
+            <div style="font-size:2rem;margin-bottom:.75rem">📅</div>
+            <div style="font-size:14px;font-weight:600;color:var(--t1);margin-bottom:.4rem">Select a day</div>
+            <div style="font-size:12px;color:var(--t2)">Click any day in the calendar to see that day's tasks and checklist.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE VIEW -->
+  <div id="view-schedule" class="view-pane" style="display:none">
+    <div class="legend">
+      <span class="leg-lbl">Subjects:</span>
+      <span class="tag t-bio">Bio</span>
+      <span class="tag t-phys">Physics C</span>
+      <span class="tag t-csp">CSP</span>
+      <span class="tag t-calc">Calc BC</span>
+      <span class="tag t-eng">Eng Lang</span>
+      <span class="tag t-exam">Exam Day</span>
+      <span class="leg-note">R = robotics day (budget ~1.5 hrs)</span>
+    </div>
+    <div id="weeks-container"></div>
+  </div>
 </main>
 
 <section class="strat-sec">
@@ -244,7 +365,7 @@ footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);dis
     <div class="strat-card"><div class="strat-lbl" style="color:var(--acc)">Robotics days (R)</div><div class="strat-txt">On R days, budget <strong>~1.5 hrs total</strong>. Pick the single highest-priority task from one subject and go deep. Do not try to cover two subjects. Quality beats quantity when you're tired from build season.</div></div>
     <div class="strat-card"><div class="strat-lbl" style="color:var(--t1)">Book strategy</div><div class="strat-txt"><strong>Barron's</strong> for content review — thorough chapter structure, clear explanations. <strong>Princeton Review</strong> for realistic practice tests. <strong>AP Classroom</strong> (collegeboard.org, free) for authentic past FRQs — these are the gold standard for both Bio and Physics C.</div></div>
     <div class="strat-card"><div class="strat-lbl" style="color:var(--eng)">May 13 is the hardest day</div><div class="strat-txt">Eng Lang morning, Physics C afternoon — two exams one day. The upside: Eng Lang needs minimal prep. The week before May 13 is essentially a <strong>Physics C sprint</strong> with one light 45-min Eng Lang session mixed in.</div></div>
-    <div class="strat-card"><div class="strat-lbl" style="color:var(--ai)">AI Scheduler</div><div class="strat-txt">Hit the <strong>purple button</strong> in the bottom-right to open the AI scheduler. Tell it if you fell behind, missed a day, have extra time, or want to swap tasks — it will update your schedule in real time. Requires an Anthropic API key (set via the nav button above).</div></div>
+    <div class="strat-card"><div class="strat-lbl" style="color:var(--acc)">Schedule editor</div><div class="strat-txt">Hit <strong>Edit Schedule</strong> in the nav (or the ✏️ button bottom-right) to move tasks, reschedule missed days, add new tasks, or edit any checklist item. Everything saves automatically in your browser — no account needed.</div></div>
   </div>
 </section>
 
@@ -253,35 +374,152 @@ footer{border-top:1px solid var(--b1);padding:1.25rem clamp(1rem,4vw,3.5rem);dis
   <span class="foot-txt" id="footer-progress"></span>
 </footer>
 
-<!-- AI PANEL -->
-<button class="ai-fab" id="ai-fab" onclick="toggleAI()" title="Open AI Scheduler">
-  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zM11 7h2v2h-2zm0 4h2v6h-2z"/></svg>
-</button>
-<div class="ai-badge" id="ai-badge"></div>
+<!-- EDIT FAB -->
+<button class="edit-fab" id="edit-fab" onclick="openEditor()" title="Edit schedule">✏️</button>
 
-<div class="ai-panel" id="ai-panel">
-  <div class="ai-panel-h">
-    <div class="ai-panel-title">
-      <div class="ai-dot"></div>
-      <span class="ai-title-txt">AI Scheduler</span>
+<!-- EDIT PANEL -->
+<div class="edit-panel" id="edit-panel">
+  <div class="ep-h">
+    <span class="ep-title">Edit Schedule</span>
+    <button class="ep-close" onclick="closeEditor()">×</button>
+  </div>
+  <div class="ep-body" id="ep-body">
+
+    <div class="ep-section">
+      <div class="ep-section-lbl">Reschedule a day</div>
+      <button class="ep-btn" onclick="toggleForm('form-reschedule')">
+        <span class="ep-icon">📅</span>
+        <div class="ep-btn-wrap">
+          <span>Push a day's tasks forward</span>
+          <span class="ep-desc">Missed a day? Move all incomplete tasks to the next available day.</span>
+        </div>
+      </button>
+      <div class="ep-form" id="form-reschedule">
+        <div class="ep-field">
+          <label>Which day to reschedule?</label>
+          <select class="ep-select" id="rs-day-sel"></select>
+        </div>
+        <div class="ep-field">
+          <label>Move tasks to which day?</label>
+          <select class="ep-select" id="rs-target-sel"></select>
+        </div>
+        <div class="ep-actions">
+          <button class="ep-save" onclick="doReschedule()">Move tasks</button>
+          <button class="ep-cancel" onclick="toggleForm('form-reschedule')">Cancel</button>
+        </div>
+      </div>
     </div>
-    <button class="ai-close" onclick="toggleAI()">×</button>
-  </div>
-  <div id="ai-key-area"></div>
-  <div class="ai-msgs" id="ai-msgs"></div>
-  <div class="ai-suggestions" id="ai-suggestions">
-    <span class="ai-sug" onclick="aiQuick('I missed today, can you reschedule?')">Missed today</span>
-    <span class="ai-sug" onclick="aiQuick('I have 3 extra hours this Saturday')">Extra time Sat</span>
-    <span class="ai-sug" onclick="aiQuick('Swap tomorrow\'s tasks to Sunday')">Move to Sunday</span>
-    <span class="ai-sug" onclick="aiQuick('I\'m falling behind on Bio, what should I cut?')">Behind on Bio</span>
-  </div>
-  <div class="ai-input-row">
-    <textarea class="ai-input" id="ai-input" placeholder="e.g. I missed Wed Week 2 — reschedule those tasks..." rows="1" onkeydown="aiKeydown(event)"></textarea>
-    <button class="ai-send" id="ai-send" onclick="sendAI()">
-      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-    </button>
+
+    <div class="ep-section">
+      <div class="ep-section-lbl">Edit a task</div>
+      <button class="ep-btn" onclick="toggleForm('form-edit-task')">
+        <span class="ep-icon">✏️</span>
+        <div class="ep-btn-wrap">
+          <span>Edit task title & checklist</span>
+          <span class="ep-desc">Change what a task says or update its checklist items.</span>
+        </div>
+      </button>
+      <div class="ep-form" id="form-edit-task">
+        <div class="ep-field">
+          <label>Select task to edit</label>
+          <select class="ep-select" id="et-task-sel" onchange="loadTaskIntoEditor()"></select>
+        </div>
+        <div class="ep-field">
+          <label>Subject</label>
+          <select class="ep-select" id="et-sub">
+            <option value="bio">Bio</option>
+            <option value="phys">Physics C</option>
+            <option value="csp">CSP</option>
+            <option value="calc">Calc BC</option>
+            <option value="eng">Eng Lang</option>
+            <option value="exam">Exam Day</option>
+          </select>
+        </div>
+        <div class="ep-field">
+          <label>Task title</label>
+          <input class="ep-input" id="et-title" type="text" placeholder="Task title...">
+        </div>
+        <div class="ep-field">
+          <label>Checklist items</label>
+          <div class="ep-chk-list" id="et-items"></div>
+          <button class="ep-add-item" onclick="addCheckItem()">+ add item</button>
+        </div>
+        <div class="ep-actions">
+          <button class="ep-save" onclick="saveTaskEdit()">Save changes</button>
+          <button class="ep-cancel" onclick="toggleForm('form-edit-task')">Cancel</button>
+          <button class="ep-danger" onclick="deleteTask()">Delete task</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ep-section">
+      <div class="ep-section-lbl">Move a task</div>
+      <button class="ep-btn" onclick="toggleForm('form-move-task')">
+        <span class="ep-icon">↕️</span>
+        <div class="ep-btn-wrap">
+          <span>Move task to a different day</span>
+          <span class="ep-desc">Swap a task to a different day without deleting it.</span>
+        </div>
+      </button>
+      <div class="ep-form" id="form-move-task">
+        <div class="ep-field">
+          <label>Task to move</label>
+          <select class="ep-select" id="mv-task-sel"></select>
+        </div>
+        <div class="ep-field">
+          <label>Move to which day?</label>
+          <select class="ep-select" id="mv-target-sel"></select>
+        </div>
+        <div class="ep-actions">
+          <button class="ep-save" onclick="doMoveTask()">Move task</button>
+          <button class="ep-cancel" onclick="toggleForm('form-move-task')">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ep-section">
+      <div class="ep-section-lbl">Add a task</div>
+      <button class="ep-btn" onclick="toggleForm('form-add-task')">
+        <span class="ep-icon">➕</span>
+        <div class="ep-btn-wrap">
+          <span>Add a new task to any day</span>
+          <span class="ep-desc">Add something custom to any day in the schedule.</span>
+        </div>
+      </button>
+      <div class="ep-form" id="form-add-task">
+        <div class="ep-field">
+          <label>Add to which day?</label>
+          <select class="ep-select" id="at-day-sel"></select>
+        </div>
+        <div class="ep-field">
+          <label>Subject</label>
+          <select class="ep-select" id="at-sub">
+            <option value="bio">Bio</option>
+            <option value="phys">Physics C</option>
+            <option value="csp">CSP</option>
+            <option value="calc">Calc BC</option>
+            <option value="eng">Eng Lang</option>
+            <option value="exam">Exam Day</option>
+          </select>
+        </div>
+        <div class="ep-field">
+          <label>Task title</label>
+          <input class="ep-input" id="at-title" type="text" placeholder="e.g. Barron's Ch. 3 re-read">
+        </div>
+        <div class="ep-field">
+          <label>Checklist items (one per line)</label>
+          <textarea class="ep-textarea" id="at-items" placeholder="Read pp. 1–20&#10;Do practice problems&#10;Make flashcards"></textarea>
+        </div>
+        <div class="ep-actions">
+          <button class="ep-save" onclick="doAddTask()">Add task</button>
+          <button class="ep-cancel" onclick="toggleForm('form-add-task')">Cancel</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
+<div class="ep-toast" id="ep-toast"></div>
 
 <script>
 /* ============================================================
@@ -1011,7 +1249,7 @@ const DEFAULT_SCHEDULE = [
 /* ============================================================
    STATE & STORAGE
    ============================================================ */
-const SK = { key:'apsp_api_key', checked:'apsp_checked_v2', schedule:'apsp_schedule_v2' };
+const SK = { checked:'apsp_checked_v2', schedule:'apsp_schedule_v2' };
 
 function loadSchedule() {
   try {
@@ -1033,11 +1271,10 @@ function saveChecked(c) {
   localStorage.setItem(SK.checked, JSON.stringify(c));
 }
 
-function getKey() { return localStorage.getItem(SK.key) || ''; }
-function setKey(k) { localStorage.setItem(SK.key, k); }
-
 let SCHEDULE = loadSchedule();
 let CHECKED = loadChecked();
+let currentView = 'calendar';
+let selectedDateISO = null;
 
 const TODAY_ISO = new Date().toISOString().split('T')[0];
 const SUB_COLOR = { bio:'--bio', phys:'--phys', csp:'--csp', calc:'--calc', eng:'--eng', exam:'--exam' };
@@ -1147,8 +1384,9 @@ function renderSchedule() {
 
   const overall = totalItems ? Math.round((doneItems/totalItems)*100) : 0;
   document.getElementById('footer-progress').textContent = `Overall progress: ${doneItems}/${totalItems} items (${overall}%)`;
+  const op = document.getElementById('overall-prog');
+  if (op) op.textContent = `${doneItems}/${totalItems} (${overall}%)`;
 }
-
 function buildTaskHTML(task, dayDate) {
   const allChecked = task.items.every((_,i) => CHECKED[`${task.id}_c${i}`]);
   const nChecked = task.items.filter((_,i) => CHECKED[`${task.id}_c${i}`]).length;
@@ -1214,6 +1452,22 @@ function toggleCheck(cid, val, taskId) {
   const doneItems = Object.values(CHECKED).filter(Boolean).length;
   const overall = totalItems ? Math.round((doneItems/totalItems)*100) : 0;
   document.getElementById('footer-progress').textContent = `Overall progress: ${doneItems}/${totalItems} items (${overall}%)`;
+  const op = document.getElementById('overall-prog');
+  if (op) op.textContent = `${doneItems}/${totalItems} (${overall}%)`;
+  // refresh calendar cell progress bar if in calendar view
+  if (currentView === 'calendar') renderCalendar();
+  // refresh detail panel header progress if a day is selected
+  if (selectedDateISO) {
+    const dateMap = buildDateMap();
+    const selDay = dateMap[selectedDateISO];
+    if (selDay) {
+      const prog = getDayProgress(selDay);
+      const hdrProg = document.querySelector('.cal-detail-hdr .cal-day-prog-fill');
+      const hdrCount = document.querySelector('.cal-detail-hdr span[style*="t3"]');
+      if (hdrProg) hdrProg.style.width = prog.pct + '%';
+      if (hdrCount) hdrCount.textContent = `${prog.done}/${prog.total} done`;
+    }
+  }
 }
 
 function toggleWeek(header) {
@@ -1240,216 +1494,429 @@ function toggleTask(header) {
 }
 
 /* ============================================================
-   AI PANEL
+   EDITOR
    ============================================================ */
-let aiOpen = false;
-let aiMessages = [];
-let pendingSchedule = null;
+let editorOpen = false;
 
-function toggleAI() {
-  aiOpen = !aiOpen;
-  document.getElementById('ai-panel').classList.toggle('open', aiOpen);
-  document.getElementById('ai-badge').classList.remove('show');
-  if (aiOpen && aiMessages.length === 0) initAIWelcome();
+function openEditor() {
+  editorOpen = true;
+  document.getElementById('edit-panel').classList.add('open');
+  populateEditorSelects();
 }
 
-function initAIWelcome() {
-  const hasKey = !!getKey();
-  if (!hasKey) {
-    renderKeyArea();
+function closeEditor() {
+  editorOpen = false;
+  document.getElementById('edit-panel').classList.remove('open');
+}
+
+function toggleForm(id) {
+  const forms = document.querySelectorAll('.ep-form');
+  forms.forEach(f => { if (f.id !== id) f.classList.remove('open'); });
+  document.getElementById(id).classList.toggle('open');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('ep-toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// Build flat list of all days across schedule
+function getAllDays() {
+  const days = [];
+  SCHEDULE.forEach(wk => {
+    wk.days.forEach(day => {
+      days.push({ wkId: wk.id, wkLabel: wk.label, dayId: day.id, label: `${wk.label} — ${day.d} (${day.date})`, day });
+    });
+  });
+  return days;
+}
+
+// Build flat list of all tasks
+function getAllTasks() {
+  const tasks = [];
+  SCHEDULE.forEach(wk => {
+    wk.days.forEach(day => {
+      day.tasks.forEach(task => {
+        tasks.push({ wkLabel: wk.label, dayLabel: day.d, dayDate: day.date, dayId: day.id, task });
+      });
+    });
+  });
+  return tasks;
+}
+
+function populateEditorSelects() {
+  const days = getAllDays();
+  const tasks = getAllTasks();
+
+  // Reschedule selects
+  const rsSrc = document.getElementById('rs-day-sel');
+  const rsTgt = document.getElementById('rs-target-sel');
+  rsSrc.innerHTML = days.map(d => `<option value="${d.dayId}">${d.label}</option>`).join('');
+  rsTgt.innerHTML = days.map(d => `<option value="${d.dayId}">${d.label}</option>`).join('');
+
+  // Edit task select
+  const etSel = document.getElementById('et-task-sel');
+  etSel.innerHTML = tasks.map(t => `<option value="${t.task.id}">${t.wkLabel} ${t.dayLabel} — ${t.task.text.substring(0,45)}${t.task.text.length>45?'...':''}</option>`).join('');
+  loadTaskIntoEditor();
+
+  // Move task selects
+  const mvTask = document.getElementById('mv-task-sel');
+  mvTask.innerHTML = tasks.map(t => `<option value="${t.task.id}">${t.wkLabel} ${t.dayLabel} — ${t.task.text.substring(0,40)}${t.task.text.length>40?'...':''}</option>`).join('');
+  const mvTgt = document.getElementById('mv-target-sel');
+  mvTgt.innerHTML = days.map(d => `<option value="${d.dayId}">${d.label}</option>`).join('');
+
+  // Add task day select
+  const atDay = document.getElementById('at-day-sel');
+  atDay.innerHTML = days.map(d => `<option value="${d.dayId}">${d.label}</option>`).join('');
+}
+
+function loadTaskIntoEditor() {
+  const taskId = document.getElementById('et-task-sel').value;
+  const tasks = getAllTasks();
+  const found = tasks.find(t => t.task.id === taskId);
+  if (!found) return;
+  const task = found.task;
+  document.getElementById('et-sub').value = task.sub || 'bio';
+  document.getElementById('et-title').value = task.text;
+  const list = document.getElementById('et-items');
+  list.innerHTML = task.items.map((item, i) => `
+    <div class="ep-chk-row" id="chkrow-${i}">
+      <input type="text" value="${item.replace(/"/g,'&quot;')}" placeholder="Checklist item...">
+      <button class="ep-rm" onclick="removeCheckRow(${i})">✕</button>
+    </div>`).join('');
+}
+
+function addCheckItem() {
+  const list = document.getElementById('et-items');
+  const i = list.children.length;
+  const row = document.createElement('div');
+  row.className = 'ep-chk-row';
+  row.id = `chkrow-${i}`;
+  row.innerHTML = `<input type="text" placeholder="Checklist item..."><button class="ep-rm" onclick="this.parentElement.remove()">✕</button>`;
+  list.appendChild(row);
+}
+
+function removeCheckRow(i) {
+  document.getElementById(`chkrow-${i}`)?.remove();
+}
+
+function saveTaskEdit() {
+  const taskId = document.getElementById('et-task-sel').value;
+  const newSub = document.getElementById('et-sub').value;
+  const newTitle = document.getElementById('et-title').value.trim();
+  if (!newTitle) { showToast('Task title cannot be empty'); return; }
+  const rows = document.getElementById('et-items').querySelectorAll('input[type=text]');
+  const newItems = Array.from(rows).map(r => r.value.trim()).filter(Boolean);
+
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    const idx = day.tasks.findIndex(t => t.id === taskId);
+    if (idx !== -1) {
+      day.tasks[idx].sub = newSub;
+      day.tasks[idx].text = newTitle;
+      day.tasks[idx].items = newItems;
+    }
+  }));
+
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  toggleForm('form-edit-task');
+  showToast('Task updated');
+}
+
+function deleteTask() {
+  const taskId = document.getElementById('et-task-sel').value;
+  if (!confirm('Delete this task? This cannot be undone.')) return;
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    day.tasks = day.tasks.filter(t => t.id !== taskId);
+  }));
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  populateEditorSelects();
+  toggleForm('form-edit-task');
+  showToast('Task deleted');
+}
+
+function doReschedule() {
+  const srcId = document.getElementById('rs-day-sel').value;
+  const tgtId = document.getElementById('rs-target-sel').value;
+  if (srcId === tgtId) { showToast('Source and target are the same day'); return; }
+
+  let srcDay = null, tgtDay = null;
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    if (day.id === srcId) srcDay = day;
+    if (day.id === tgtId) tgtDay = day;
+  }));
+  if (!srcDay || !tgtDay) return;
+
+  // Move incomplete tasks only (tasks with at least one unchecked item, or no items)
+  const toMove = srcDay.tasks.filter(task => {
+    if (task.items.length === 0) return true;
+    return task.items.some((_, i) => !CHECKED[`${task.id}_c${i}`]);
+  });
+  const toKeep = srcDay.tasks.filter(task => !toMove.includes(task));
+
+  srcDay.tasks = toKeep;
+  tgtDay.tasks = [...tgtDay.tasks, ...toMove];
+
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  populateEditorSelects();
+  toggleForm('form-reschedule');
+  showToast(`${toMove.length} task(s) moved`);
+}
+
+function doMoveTask() {
+  const taskId = document.getElementById('mv-task-sel').value;
+  const tgtDayId = document.getElementById('mv-target-sel').value;
+
+  let task = null;
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    const idx = day.tasks.findIndex(t => t.id === taskId);
+    if (idx !== -1) {
+      task = day.tasks.splice(idx, 1)[0];
+    }
+  }));
+
+  if (!task) return;
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    if (day.id === tgtDayId) day.tasks.push(task);
+  }));
+
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  populateEditorSelects();
+  toggleForm('form-move-task');
+  showToast('Task moved');
+}
+
+function doAddTask() {
+  const dayId = document.getElementById('at-day-sel').value;
+  const sub = document.getElementById('at-sub').value;
+  const title = document.getElementById('at-title').value.trim();
+  if (!title) { showToast('Please enter a task title'); return; }
+  const itemsRaw = document.getElementById('at-items').value;
+  const items = itemsRaw.split('\n').map(s=>s.trim()).filter(Boolean);
+
+  const newTask = {
+    id: 'custom_' + Date.now(),
+    sub, text: title, items
+  };
+
+  SCHEDULE.forEach(wk => wk.days.forEach(day => {
+    if (day.id === dayId) day.tasks.push(newTask);
+  }));
+
+  document.getElementById('at-title').value = '';
+  document.getElementById('at-items').value = '';
+
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  populateEditorSelects();
+  toggleForm('form-add-task');
+  showToast('Task added');
+}
+
+function resetSchedule() {
+  if (!confirm('Reset to the original schedule? Your checkboxes will be kept but all custom edits will be lost.')) return;
+  SCHEDULE = JSON.parse(JSON.stringify(DEFAULT_SCHEDULE));
+  saveSchedule(SCHEDULE);
+  renderSchedule();
+  showToast('Schedule reset to default');
+}
+
+/* ============================================================
+   VIEW TOGGLE
+   ============================================================ */
+function setView(v) {
+  currentView = v;
+  document.getElementById('view-calendar').style.display = v === 'calendar' ? '' : 'none';
+  document.getElementById('view-schedule').style.display = v === 'schedule' ? '' : 'none';
+  document.getElementById('tab-cal').classList.toggle('active', v === 'calendar');
+  document.getElementById('tab-sch').classList.toggle('active', v === 'schedule');
+  if (v === 'calendar') renderCalendar();
+}
+
+/* ============================================================
+   CALENDAR
+   ============================================================ */
+const CAL_START = new Date('2026-03-17');
+const CAL_END = new Date('2026-05-14');
+const EXAM_DATES = new Set(['2026-05-04','2026-05-11','2026-05-13','2026-05-14','2026-04-30']);
+function buildDateMap() {
+  const map = {};
+  SCHEDULE.forEach(wk => wk.days.forEach(day => { map[day.date] = day; }));
+  return map;
+}
+
+function getDayProgress(day) {
+  let total = 0, done = 0;
+  day.tasks.forEach(t => t.items.forEach((_, i) => {
+    total++;
+    if (CHECKED[`${t.id}_c${i}`]) done++;
+  }));
+  return { total, done, pct: total ? Math.round(done/total*100) : 0 };
+}
+
+// Calendar display state
+let calYear = 2026;
+let calMonth = 2; // 0-indexed, 2 = March
+
+function isoFromDate(d) {
+  return d.toISOString().split('T')[0];
+}
+
+function renderCalendar() {
+  const dateMap = buildDateMap();
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  document.getElementById('cal-month-lbl').textContent = `${monthNames[calMonth]} ${calYear}`;
+  document.getElementById('cal-prev').disabled = (calYear === 2026 && calMonth <= 2);
+  document.getElementById('cal-next').disabled = (calYear === 2026 && calMonth >= 4);
+
+  const grid = document.getElementById('cal-grid');
+  grid.innerHTML = '';
+
+  // First day of month
+  const firstDay = new Date(calYear, calMonth, 1);
+  const startDow = firstDay.getDay(); // 0=Sun
+  const daysInMonth = new Date(calYear, calMonth+1, 0).getDate();
+
+  // Fill leading empty cells
+  for (let i = 0; i < startDow; i++) {
+    const blank = document.createElement('div');
+    blank.className = 'cal-cell out-of-range';
+    grid.appendChild(blank);
   }
-  addAIMsg('ai', 'Hey! I\'m your AI scheduler. Tell me if you fall behind, need to swap a day, have extra time, or want to restructure any part of your plan — I\'ll update your schedule in real time.\n\nTry: "I missed Wednesday of Week 2, can you reschedule those tasks?" or "I have 3 extra hours this Sunday."');
-}
 
-function renderKeyArea() {
-  const el = document.getElementById('ai-key-area');
-  const k = getKey();
-  if (k) { el.innerHTML = ''; return; }
-  el.innerHTML = `<div class="ai-key-banner">
-    <span>Enter your Anthropic API key to enable AI scheduling. Your key is stored only in this browser's localStorage.</span>
-    <input class="ai-key-input" id="key-input" type="password" placeholder="sk-ant-..." value="${k}">
-    <button class="ai-key-save" onclick="saveKeyFromInput()">Save Key</button>
-  </div>`;
-}
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(calYear, calMonth, d);
+    const iso = isoFromDate(date);
+    const inRange = date >= CAL_START && date <= CAL_END;
+    const dayData = dateMap[iso];
+    const isToday = iso === TODAY_ISO;
+    const isExam = EXAM_DATES.has(iso);
+    const isSelected = iso === selectedDateISO;
 
-function saveKeyFromInput() {
-  const k = document.getElementById('key-input')?.value?.trim();
-  if (k) {
-    setKey(k);
-    document.getElementById('ai-key-area').innerHTML = '';
-    addAIMsg('sys', 'API key saved. AI scheduling is now active.');
+    const cell = document.createElement('div');
+    let cls = 'cal-cell';
+    if (!inRange) cls += ' out-of-range';
+    if (isToday) cls += ' is-today';
+    if (isExam && inRange) cls += ' is-exam';
+    if (isSelected) cls += ' selected';
+    cell.className = cls;
+
+    if (inRange) {
+      cell.onclick = () => selectCalDay(iso);
+    }
+
+    // Day number
+    const dn = document.createElement('div');
+    dn.className = 'cal-dn';
+    dn.textContent = d;
+    cell.appendChild(dn);
+
+    // Robotics badge
+    if (dayData?.r) {
+      const rb = document.createElement('div');
+      rb.className = 'cal-r-badge';
+      rb.textContent = 'R';
+      cell.appendChild(rb);
+    }
+
+    // Task dots
+    if (dayData?.tasks?.length) {
+      const dots = document.createElement('div');
+      dots.className = 'cal-dots';
+      const seen = new Set();
+      dayData.tasks.forEach(t => {
+        const sub = t.sub || 'calc';
+        if (!seen.has(sub)) {
+          seen.add(sub);
+          const dot = document.createElement('div');
+          dot.className = `cal-dot ${sub}`;
+          dots.appendChild(dot);
+        }
+      });
+      cell.appendChild(dots);
+
+      // Day progress bar
+      const prog = getDayProgress(dayData);
+      if (prog.total > 0) {
+        const bar = document.createElement('div');
+        bar.className = 'cal-day-prog';
+        bar.innerHTML = `<div class="cal-day-prog-fill" style="width:${prog.pct}%"></div>`;
+        cell.appendChild(bar);
+      }
+    }
+
+    grid.appendChild(cell);
   }
 }
 
-function openKeyModal() {
-  if (!aiOpen) toggleAI();
-  const el = document.getElementById('ai-key-area');
-  el.innerHTML = `<div class="ai-key-banner">
-    <span>Update your Anthropic API key:</span>
-    <input class="ai-key-input" id="key-input" type="password" placeholder="sk-ant-..." value="${getKey()}">
-    <button class="ai-key-save" onclick="saveKeyFromInput()">Save Key</button>
-  </div>`;
+function calPrev() {
+  if (calMonth > 0) { calMonth--; } else { calMonth = 11; calYear--; }
+  renderCalendar();
 }
 
-function addAIMsg(role, text, applyData) {
-  aiMessages.push({ role, text });
-  const msgs = document.getElementById('ai-msgs');
-  const div = document.createElement('div');
-  div.className = `msg ${role}`;
-  div.style.whiteSpace = 'pre-wrap';
-  div.textContent = text;
-  if (applyData) {
-    const btn = document.createElement('button');
-    btn.className = 'apply-btn';
-    btn.textContent = 'Apply changes to schedule';
-    btn.onclick = () => applyScheduleUpdate(applyData, btn);
-    div.appendChild(document.createElement('br'));
-    div.appendChild(btn);
-  }
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
+function calNext() {
+  if (calMonth < 11) { calMonth++; } else { calMonth = 0; calYear++; }
+  renderCalendar();
 }
 
-function addLoadingMsg() {
-  const msgs = document.getElementById('ai-msgs');
-  const div = document.createElement('div');
-  div.className = 'msg-loading';
-  div.id = 'ai-loading';
-  div.innerHTML = '<span></span><span></span><span></span>';
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
+function selectCalDay(iso) {
+  selectedDateISO = iso;
+  renderCalendar(); // re-render to show selected state
 
-function removeLoadingMsg() {
-  document.getElementById('ai-loading')?.remove();
-}
+  const dateMap = buildDateMap();
+  const day = dateMap[iso];
+  const detail = document.getElementById('cal-detail');
 
-function aiQuick(text) {
-  document.getElementById('ai-input').value = text;
-  sendAI();
-}
+  const date = new Date(iso + 'T12:00:00');
+  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const dayName = dayNames[date.getDay()];
+  const dateStr = `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  const isToday = iso === TODAY_ISO;
+  const isExam = EXAM_DATES.has(iso);
 
-async function sendAI() {
-  const input = document.getElementById('ai-input');
-  const text = input.value.trim();
-  if (!text) return;
+  let metaHTML = '';
+  if (isToday) metaHTML += `<span class="tag t-exam" style="font-size:9px">TODAY</span>`;
+  if (isExam) metaHTML += `<span class="tag t-exam" style="font-size:9px">EXAM DAY</span>`;
+  if (day?.r) metaHTML += `<span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(245,197,24,0.6);font-weight:700">ROBOTICS</span>`;
 
-  const key = getKey();
-  if (!key) {
-    renderKeyArea();
-    addAIMsg('sys', 'Please enter your API key above to use the AI scheduler.');
+  if (!day || day.tasks.length === 0) {
+    detail.innerHTML = `
+      <div class="cal-detail-hdr">
+        <div class="cal-detail-date">
+          <div class="cal-detail-dayname">${dayName}</div>
+          <div class="cal-detail-full">${dateStr}</div>
+        </div>
+        <div class="cal-detail-meta">${metaHTML}</div>
+      </div>
+      <div class="cal-no-tasks">No tasks scheduled for this day.</div>`;
     return;
   }
 
-  input.value = '';
-  input.style.height = 'auto';
-  addAIMsg('user', text);
-  addLoadingMsg();
-  document.getElementById('ai-send').disabled = true;
+  const prog = getDayProgress(day);
+  const tasksHTML = day.tasks.map(task => buildTaskHTML(task, iso)).join('');
 
-  // Build context
-  const completedIds = Object.entries(CHECKED).filter(([,v])=>v).map(([k])=>k);
-  const scheduleJSON = JSON.stringify(SCHEDULE, null, 2);
-
-  const systemPrompt = `You are an AP exam study schedule assistant for a high school student preparing for 5 AP exams in May 2026:
-- AP Biology: Monday May 4, 8 AM (weakest subject)
-- AP Calc BC: Monday May 11, 8 AM
-- AP English Lang: Wednesday May 13, 8 AM
-- AP Physics C Mechanics: Wednesday May 13, 12 PM (weakest subject)
-- AP CSP: Thursday May 14, 12 PM
-
-Key constraints:
-- Heavy robotics commitment: 3-4 days/week (marked with r:true in schedule — ~1.5 hrs study budget those days)
-- 1.5-2.5 hrs study time on non-robotics days
-- CSP Create task HARD deadline: April 30, 11:59 PM ET
-- Calc BC and Eng Lang need minimal prep (student is strong in these)
-- Bio and Physics C are the priority weakest subjects
-
-Today's date: ${new Date().toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'})}.
-
-COMPLETED TASKS (do not re-add these): ${JSON.stringify(completedIds)}
-
-CURRENT SCHEDULE (full JSON):
-${scheduleJSON}
-
-When the student asks to modify their schedule:
-1. Respond conversationally explaining what you changed and why
-2. Keep changes realistic given the robotics constraint
-3. If returning a new schedule, output the FULL modified schedule array between these exact tags:
-<schedule_update>
-[paste full JSON array here]
-</schedule_update>
-
-Only include schedule_update if the student is explicitly asking to change, reschedule, move, or adjust the plan. For questions or advice, just respond naturally.
-Important: preserve all existing task IDs and structure. Only change the content, order, or day assignment of tasks when explicitly requested.`;
-
-  try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 4000,
-        system: systemPrompt,
-        messages: [
-          ...aiMessages.filter(m=>m.role!='sys').slice(-6).map(m=>({ role: m.role==='ai'?'assistant':'user', content: m.text })),
-          { role: 'user', content: text }
-        ]
-      })
-    });
-
-    removeLoadingMsg();
-    document.getElementById('ai-send').disabled = false;
-
-    if (!resp.ok) {
-      const err = await resp.json().catch(()=>({}));
-      addAIMsg('sys', `API error ${resp.status}: ${err.error?.message || 'check your API key'}`);
-      return;
-    }
-
-    const data = await resp.json();
-    const raw = data.content?.[0]?.text || '';
-
-    // Check for schedule update
-    const match = raw.match(/<schedule_update>([\s\S]*?)<\/schedule_update>/);
-    let displayText = raw.replace(/<schedule_update>[\s\S]*?<\/schedule_update>/, '').trim();
-    if (!displayText) displayText = 'Schedule updated! Click Apply below to see the changes.';
-
-    let parsedSchedule = null;
-    if (match) {
-      try { parsedSchedule = JSON.parse(match[1].trim()); } catch(e) { console.warn('Schedule parse error', e); }
-    }
-
-    addAIMsg('ai', displayText, parsedSchedule);
-
-    if (parsedSchedule) {
-      document.getElementById('ai-badge').classList.add('show');
-    }
-
-  } catch(e) {
-    removeLoadingMsg();
-    document.getElementById('ai-send').disabled = false;
-    addAIMsg('sys', `Error: ${e.message}. Check your API key and internet connection.`);
-  }
-}
-
-function applyScheduleUpdate(newSchedule, btn) {
-  if (!newSchedule) return;
-  SCHEDULE = newSchedule;
-  saveSchedule(SCHEDULE);
-  renderSchedule();
-  btn.textContent = '✓ Applied!';
-  btn.disabled = true;
-  btn.style.background = 'var(--ok)';
-  addAIMsg('sys', 'Schedule updated successfully.');
-  document.getElementById('ai-badge').classList.remove('show');
-}
-
-function aiKeydown(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendAI(); }
-  // auto-resize
-  e.target.style.height = 'auto';
-  e.target.style.height = Math.min(e.target.scrollHeight, 100) + 'px';
+  detail.innerHTML = `
+    <div class="cal-detail-hdr">
+      <div class="cal-detail-date">
+        <div class="cal-detail-dayname">${dayName}</div>
+        <div class="cal-detail-full">${dateStr}</div>
+      </div>
+      <div class="cal-detail-meta">
+        ${metaHTML}
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3)">${prog.done}/${prog.total} done</span>
+        <div style="width:50px;height:4px;background:var(--s3);border-radius:2px;overflow:hidden">
+          <div style="width:${prog.pct}%;height:100%;background:var(--ok);border-radius:2px"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cal-detail-tasks">${tasksHTML}</div>`;
 }
 
 /* ============================================================
@@ -1457,6 +1924,14 @@ function aiKeydown(e) {
    ============================================================ */
 buildCountdowns();
 renderSchedule();
+renderCalendar();
+
+// Auto-select today in calendar if in range
+if (new Date(TODAY_ISO) >= CAL_START && new Date(TODAY_ISO) <= CAL_END) {
+  const todayMonth = new Date(TODAY_ISO).getMonth();
+  calMonth = todayMonth;
+  selectCalDay(TODAY_ISO);
+}
 </script>
 </body>
 </html>
